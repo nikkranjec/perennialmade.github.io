@@ -1,0 +1,502 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="assets/support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<title>perennial — creative studio</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" media="(prefers-color-scheme: light)" content="#fffdfa">
+<meta name="theme-color" media="(prefers-color-scheme: dark)" content="#141414">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous">
+<link href="https://fonts.googleapis.com/css2?family=Shadows+Into+Light&amp;display=swap" rel="stylesheet">
+<style>
+@font-face{font-family:'Mundial';src:url('assets/MundialHair.otf') format('opentype');font-weight:100;font-style:normal;font-display:swap;}
+@font-face{font-family:'Mundial';src:url('assets/MundialLight.otf') format('opentype');font-weight:300;font-style:normal;font-display:swap;}
+@font-face{font-family:'Mundial';src:url('assets/MundialLight.otf') format('opentype');font-weight:400;font-style:normal;font-display:swap;}
+@font-face{font-family:'Mundial';src:url('assets/MundialItalic.otf') format('opentype');font-weight:400;font-style:italic;font-display:swap;}
+@font-face{font-family:'Mundial';src:url('assets/MundialDemibold.otf') format('opentype');font-weight:600;font-style:normal;font-display:swap;}
+@font-face{font-family:'Mundial';src:url('assets/MundialDemiboldItalic.otf') format('opentype');font-weight:600;font-style:italic;font-display:swap;}
+@font-face{font-family:'Mundial';src:url('assets/MundialBold.otf') format('opentype');font-weight:700;font-style:normal;font-display:swap;}
+@font-face{font-family:'Mundial';src:url('assets/MundialBoldItalic.otf') format('opentype');font-weight:700;font-style:italic;font-display:swap;}
+@font-face{font-family:'Blah Blah Bang';src:url('assets/Blah%20blah%20bang.ttf') format('truetype');font-display:swap;}
+html,body{margin:0;padding:0;background:#fffdfa;}
+@media (prefers-color-scheme: dark){html,body{background:#141414;}}
+body{font-family:'Mundial','Helvetica Neue',sans-serif;color:#141414;-webkit-font-smoothing:antialiased;}
+a{color:#141414;text-decoration:none;}
+a:hover{color:#141414;}
+@media (pointer:fine){body,body *{cursor:none !important;}}
+::selection{background:#8FBCDF;color:#141414;}
+@keyframes dotPulse{0%{box-shadow:0 0 0 0 rgba(20,20,20,0.32);}100%{box-shadow:0 0 0 15px rgba(20,20,20,0);}}
+</style>
+</helmet>
+<div data-screen-label="Perennial site v2">
+<section data-screen-label="01 Hero" style="position:relative;height:100svh;background:#8b8b8b;overflow:hidden;border-radius:min(75px,9vw) min(75px,9vw) 0 0;">
+<img src="assets/perennial%20hero-3b09ecae.webp" alt="perennial embossed in metal" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;">
+<header style="position:absolute;top:0;left:0;right:0;display:flex;align-items:center;justify-content:space-between;padding:clamp(22px,5vh,44px) clamp(20px,3.2vw,46px);">
+<a data-hov="1" href="#" onClick="{{ goTop }}" style="display:block;"><img src="assets/Perennial%20ime_belo.png" alt="perennial" style="display:block;height:clamp(20px,2.2vw,32px);width:auto;"></a>
+<div style="width:clamp(38px,3.3vw,48px);height:clamp(38px,3.3vw,48px);border:1.5px solid rgba(255,253,250,0.9);border-radius:50%;display:flex;align-items:center;justify-content:center;cursor:pointer;transition:transform 0.3s ease;" style-hover="transform:scale(1.08)">
+<img src="assets/logotip_bel.png" alt="menu" style="width:66%;height:auto;display:block;transform:translate(2.5%,6%);">
+</div>
+</header>
+<div style="position:absolute;left:clamp(20px,3.2vw,46px);right:clamp(20px,3.2vw,46px);bottom:12vh;display:flex;justify-content:space-between;align-items:flex-end;font-size:clamp(12px,1vw,15px);line-height:1.5;color:#fffdfa;">
+<a data-hov="1" href="https://www.instagram.com/perennial.made" target="_blank" rel="noreferrer" style="color:#fffdfa;" style-hover="font-style:italic">@perennial.made</a>
+<div style="text-align:right;">Ljubljana<br>{{ time }}</div>
+</div>
+</section>
+<section data-screen-label="02 Paper card" style="position:relative;margin:-6vh 0 0;border-radius:min(75px,9vw);border:1px solid rgba(20,20,20,0.45);background:#f2f1ef url('assets/grain.png') repeat;background-size:170px 170px;box-shadow:0 -12px 30px -6px rgba(10,10,10,0.4);overflow:hidden;">
+<div id="about" data-screen-label="02 Manifest" style="position:relative;padding:{{ manifestPad }};">
+<div style="position:relative;box-sizing:border-box;width:min(26.4em,100%);margin:0 auto;padding:0 1.6em;font-size:clamp(22px,2.55vw,38px);">
+<p style="margin:0;font-size:1em;font-weight:400;line-height:1.2;letter-spacing:0.002em;color:#171717;text-wrap:pretty;">
+Perennial is a creative <span style="position:relative;display:inline-block;white-space:nowrap;"><s style="text-decoration-thickness:0.085em;text-decoration-color:#141414;">studio</s><span style="position:absolute;left:50%;bottom:calc(100% - 0.55em);transform:translateX(-50%) rotate(-2.5deg);font-family:'Blah Blah Bang','Shadows Into Light',cursive;font-size:0.66em;line-height:1;color:#141414;white-space:nowrap;">collective</span></span> with one shared goal: creating <span style="position:relative;display:inline-block;white-space:nowrap;"><s style="text-decoration-thickness:0.085em;text-decoration-color:#141414;">campaigns</s><span style="position:absolute;left:50%;bottom:calc(100% - 0.55em);transform:translateX(-50%) rotate(2deg);font-family:'Blah Blah Bang','Shadows Into Light',cursive;font-size:0.66em;line-height:1;color:#141414;white-space:nowrap;">stories</span></span> that outlive the noise of daily trends. From concept to delivery, everything is made in-house, so nothing gets lost between the first idea and the final cut, and we sweat every detail because that is what adds real value to a <span style="position:relative;display:inline-block;white-space:nowrap;"><s style="text-decoration-thickness:0.085em;text-decoration-color:#141414;">company</s><span style="position:absolute;left:50%;bottom:calc(100% - 0.55em);transform:translateX(-50%) rotate(-3deg);font-family:'Blah Blah Bang','Shadows Into Light',cursive;font-size:0.66em;line-height:1;color:#141414;white-space:nowrap;">life</span></span>.
+</p>
+
+<div style="position:absolute;left:{{ helloLeft }};top:-2.6em;font-family:'Blah Blah Bang','Shadows Into Light',cursive;font-size:clamp(18px,1.75vw,26px);color:#141414;transform:rotate(-2deg);">HELLO</div>
+</div>
+</div>
+<div id="team" data-screen-label="03 Video + dots" ref="{{ gameRef }}" style="position:relative;font-size:clamp(22px,2.55vw,38px);padding:7em 0 9em;margin:0 0 {{ teamMB }};">
+<div ref="{{ videoRef }}" style="position:relative;z-index:5;width:100%;aspect-ratio:{{ videoAspect }};border-radius:min(75px,9vw);overflow:hidden;background:#0d0d0d;">
+<video src="assets/Perennial%20keyhole%203.mp4" poster="assets/video%20place%20holder%201.png" autoPlay="{{ true }}" muted="{{ true }}" loop="{{ true }}" playsInline="{{ true }}" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;"></video>
+</div>
+<div style="position: relative; box-sizing: border-box; width: min(26.4em,100%); margin: {{ teamTextTop }} auto 0; padding: 0 1.6em">
+<p style="margin: 0; font-size: 1em; font-weight: 400; line-height: 1.2; color: #171717; text-align: right; text-wrap: pretty">
+We build brands with <span style="position:relative;display:inline-block;white-space:nowrap;"><s style="text-decoration-thickness:0.085em;text-decoration-color:#141414;">funds</s><span style="position:absolute;left:50%;bottom:calc(100% - 0.55em);transform:translateX(-50%) rotate(-2deg);font-family:'Blah Blah Bang','Shadows Into Light',cursive;font-size:0.66em;line-height:1;color:#141414;white-space:nowrap;">purpose</span></span> that bring people closer to themselves, to each other and to the world outside the screen. Every piece of work should transform people twice, first for the ones who make it and then the ones who experience it. Digital is the medium. <span style="position:relative;display:inline-block;white-space:nowrap;"><s style="text-decoration-thickness:0.085em;text-decoration-color:#141414;">Engagement</s><span style="position:absolute;left:50%;bottom:calc(100% - 0.55em);transform:translateX(-50%) rotate(2.5deg);font-family:'Blah Blah Bang','Shadows Into Light',cursive;font-size:0.66em;line-height:1;color:#141414;white-space:nowrap;">being human</span></span> is the point.
+</p>
+
+<div style="position: absolute; right: {{ goodRight }}; max-width: {{ goodMaxW }}; font-family: 'Blah Blah Bang','Shadows Into Light',cursive; font-size: clamp(18px,1.75vw,26px); line-height: 1.15; color: #141414; transform: rotate(2deg); top: {{ goodTop }}">that's how we know it's good!</div>
+</div>
+<div onPointerDown="{{ gameDown }}" style="position:absolute;inset:0;z-index:{{ dotsZ }};">
+<canvas ref="{{ lineRef }}" style="position:absolute;inset:0;width:100%;height:100%;pointer-events:none;"></canvas>
+<sc-for list="{{ dots }}" as="dot" hint-placeholder-count="0">
+<div onPointerDown="{{ dot.down }}" data-hov="1" style="position:absolute;left:{{ dot.l }};top:{{ dot.t }};width:40px;height:40px;margin:-20px 0 0 -20px;display:flex;align-items:center;justify-content:center;touch-action:none;cursor:pointer;opacity:{{ dot.op }};pointer-events:{{ dot.pe }};transition:opacity 1.5s ease;">
+<div style="width:13px;height:13px;border-radius:50%;background:{{ dot.bg }};transition:background 0.5s ease;"></div>
+<span style="position:absolute;right:28px;top:11px;font-size:{{ dot.numFs }};line-height:1;color:{{ dot.numColor }};transition:color 0.5s ease;">{{ dot.num }}</span>
+<sc-if value="{{ dot.hasLabel }}" hint-placeholder-val="{{ false }}"><span style="position:absolute;left:30px;top:11px;font-size:{{ dot.numFs }};line-height:1;color:#8FBCDF;white-space:nowrap;opacity:{{ dot.labelOp }};transition:opacity 1.2s ease;">{{ dot.label }}</span></sc-if>
+</div>
+</sc-for>
+<div style="position:absolute;left:{{ hintL }};top:{{ hintT }};opacity:{{ hintOp }};transition:opacity 0.5s ease;pointer-events:none;font-family:'Blah Blah Bang','Shadows Into Light',cursive;font-size:21px;color:#141414;transform:rotate(-4deg);white-space:nowrap;">khm...</div>
+</div>
+</div>
+<div id="footer" data-screen-label="05 Footer" style="position:relative;padding:{{ footerTop }} 0 0;">
+<a data-hov="1" href="https://www.tiktok.com/@perennial.made" target="_blank" rel="noreferrer" style="position:absolute;left:47%;bottom:{{ tkB }};font-family:'Blah Blah Bang','Shadows Into Light',cursive;font-size:clamp(19px,1.9vw,27px);color:#141414;transform:rotate(-3deg);" style-hover="transform:rotate(-3deg) scale(1.07)">TIKTOK</a>
+<a data-hov="1" href="https://www.instagram.com/perennial.made" target="_blank" rel="noreferrer" style="position:absolute;left:60%;bottom:{{ igB }};font-family:'Blah Blah Bang','Shadows Into Light',cursive;font-size:clamp(19px,1.9vw,27px);color:#141414;transform:rotate(-1deg);" style-hover="transform:rotate(-1deg) scale(1.07)">INSTAGRAM</a>
+<div style="position:relative;z-index:1;margin:{{ contactMB }};">
+<div style="text-align:left;font-size:clamp(15px,1.4vw,20px);line-height:1.45;">070 483 190<br><a data-hov="1" href="mailto:perennial.made@gmail.com" style-hover="font-style:italic">perennial.made@gmail.com</a></div>
+</div>
+<div style="position:relative;overflow:hidden;margin:{{ wmTopM }} 0 0;">
+<img src="assets/IME_perennail.png" alt="perennial" style="display:block;width:115vw;max-width:none;height:auto;margin:{{ wmMargin }};">
+<div style="position:absolute;left:0;right:0;bottom:1.1vw;text-align:center;font-size:12.5px;color:#a09b90;">all rights reserved @perennial 2026</div>
+</div>
+</div>
+</section>
+<sc-if value="{{ showWin }}" hint-placeholder-val="{{ false }}">
+<div data-screen-label="06 Win modal" style="position:fixed;inset:0;z-index:75;display:flex;align-items:center;justify-content:center;">
+<div onClick="{{ closeWin }}" style="position:absolute;inset:0;background:rgba(16,16,16,0.38);"></div>
+<div style="position:relative;background:#fffdfa;border:1px solid rgba(20,20,20,0.4);border-radius:44px;padding:54px 46px 42px;max-width:430px;margin:0 20px;text-align:center;box-shadow:0 30px 90px rgba(10,10,10,0.35);">
+<div style="position:absolute;top:-16px;right:34px;font-family:'Blah Blah Bang','Shadows Into Light',cursive;font-size:26px;color:#141414;transform:rotate(4deg);">stay connected</div>
+<h3 style="font-size:26px;font-weight:600;margin:0 0 14px;">You connected us.</h3>
+<p style="font-size:14.5px;line-height:1.65;color:#3a3a3a;margin:0 0 26px;text-wrap:pretty;">That's the point of everything we make — things, and people, only make sense connected. Thanks for taking the time to draw the line. Let's keep it going.</p>
+<a data-hov="1" href="https://www.instagram.com/perennial.made" target="_blank" rel="noreferrer" style="display:inline-block;padding:13px 28px;border-radius:30px;background:#141414;color:#fffdfa;font-size:13.5px;letter-spacing:0.04em;" style-hover="font-style:italic">Find us on Instagram</a>
+<div style="margin-top:16px;"><a data-hov="1" href="#" onClick="{{ resetGame }}" style="font-size:13px;color:#6b6b6b;" style-hover="font-style:italic">draw it again</a></div>
+</div>
+</div>
+</sc-if>
+<sc-if value="{{ showOverlay }}" hint-placeholder-val="{{ true }}">
+<div data-screen-label="00 Intro" onClick="{{ skipIntro }}" style="position:fixed;inset:0;z-index:80;background:#ffffff;display:flex;align-items:center;justify-content:center;opacity:{{ overlayOp }};transition:opacity 0.85s ease;pointer-events:{{ overlayPE }};">
+<img src="assets/Logotip%20Perennial.svg" alt="perennial logo" style="width:min(30vmin,240px);opacity:{{ logoOp }};transform:{{ logoTf }};filter:{{ logoBlur }};transition:opacity 1.1s ease,transform 1.3s cubic-bezier(0.22,1,0.36,1),filter 1.1s ease;">
+</div>
+</sc-if>
+<div ref="{{ cursorRef }}" style="position:fixed;left:0;top:0;width:26px;height:26px;border-radius:50%;background:#8FBCDF;z-index:100;pointer-events:none;transform:translate(-100px,-100px);will-change:transform;"></div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;forceMobile&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:false,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Behavior&quot;},&quot;showIntro&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Behavior&quot;},&quot;dotsCount&quot;:{&quot;editor&quot;:&quot;int&quot;,&quot;default&quot;:50,&quot;min&quot;:12,&quot;max&quot;:60,&quot;tsType&quot;:&quot;number&quot;,&quot;section&quot;:&quot;Behavior&quot;},&quot;accent&quot;:{&quot;editor&quot;:&quot;color&quot;,&quot;default&quot;:&quot;#8FBCDF&quot;,&quot;options&quot;:[&quot;#8FBCDF&quot;,&quot;#141414&quot;,&quot;#E7B39C&quot;,&quot;#B8CBA2&quot;],&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;Look&quot;},&quot;manifestTop&quot;:{&quot;editor&quot;:&quot;range&quot;,&quot;default&quot;:39,&quot;min&quot;:0,&quot;max&quot;:60,&quot;step&quot;:1,&quot;unit&quot;:&quot;vh&quot;,&quot;tsType&quot;:&quot;number&quot;,&quot;section&quot;:&quot;Spacing&quot;},&quot;manifestBottom&quot;:{&quot;editor&quot;:&quot;range&quot;,&quot;default&quot;:12,&quot;min&quot;:0,&quot;max&quot;:60,&quot;step&quot;:1,&quot;unit&quot;:&quot;vh&quot;,&quot;tsType&quot;:&quot;number&quot;,&quot;section&quot;:&quot;Spacing&quot;},&quot;teamTop&quot;:{&quot;editor&quot;:&quot;range&quot;,&quot;default&quot;:32,&quot;min&quot;:0,&quot;max&quot;:60,&quot;step&quot;:1,&quot;unit&quot;:&quot;vh&quot;,&quot;tsType&quot;:&quot;number&quot;,&quot;section&quot;:&quot;Spacing&quot;},&quot;teamBottom&quot;:{&quot;editor&quot;:&quot;range&quot;,&quot;default&quot;:0,&quot;min&quot;:0,&quot;max&quot;:60,&quot;step&quot;:1,&quot;unit&quot;:&quot;vh&quot;,&quot;tsType&quot;:&quot;number&quot;,&quot;section&quot;:&quot;Spacing&quot;},&quot;mobileContactGap&quot;:{&quot;editor&quot;:&quot;range&quot;,&quot;default&quot;:0,&quot;min&quot;:0,&quot;max&quot;:40,&quot;step&quot;:0.5,&quot;unit&quot;:&quot;vw&quot;,&quot;tsType&quot;:&quot;number&quot;,&quot;section&quot;:&quot;Footer — mobile&quot;},&quot;mobileTiktok&quot;:{&quot;editor&quot;:&quot;range&quot;,&quot;default&quot;:27,&quot;min&quot;:10,&quot;max&quot;:120,&quot;step&quot;:1,&quot;unit&quot;:&quot;vw&quot;,&quot;tsType&quot;:&quot;number&quot;,&quot;section&quot;:&quot;Footer — mobile&quot;},&quot;mobileInstagram&quot;:{&quot;editor&quot;:&quot;range&quot;,&quot;default&quot;:39,&quot;min&quot;:10,&quot;max&quot;:120,&quot;step&quot;:1,&quot;unit&quot;:&quot;vw&quot;,&quot;tsType&quot;:&quot;number&quot;,&quot;section&quot;:&quot;Footer — mobile&quot;},&quot;mobileWordmarkTop&quot;:{&quot;editor&quot;:&quot;range&quot;,&quot;default&quot;:-10.5,&quot;min&quot;:-20,&quot;max&quot;:60,&quot;step&quot;:0.5,&quot;unit&quot;:&quot;vw&quot;,&quot;tsType&quot;:&quot;number&quot;,&quot;section&quot;:&quot;Footer — mobile&quot;},&quot;mobileWordmarkBottom&quot;:{&quot;editor&quot;:&quot;range&quot;,&quot;default&quot;:-1.3,&quot;min&quot;:-20,&quot;max&quot;:20,&quot;step&quot;:0.1,&quot;unit&quot;:&quot;vw&quot;,&quot;tsType&quot;:&quot;number&quot;,&quot;section&quot;:&quot;Footer — mobile&quot;}}">
+class Component extends DCLogic {
+  constructor(props){
+    super(props);
+    this.gameRef=React.createRef();this.lineRef=React.createRef();this.cursorRef=React.createRef();this.videoRef=React.createRef();
+    const reduce=(typeof window!=='undefined'&&window.matchMedia&&window.matchMedia('(prefers-reduced-motion: reduce)').matches);
+    this.skip=(props&&props.showIntro===false)||reduce;
+    this.state={introStep:this.skip?3:0,overlayGone:this.skip,menuOpen:false,time:'',isMobile:(typeof window!=='undefined'&&window.matchMedia&&window.matchMedia('(max-width:719px)').matches)||false,dots:[],conn:0,won:false,dotsFront:false,dotsReady:false,closedOuter:false,closedInner:false};
+    this.labels={3:'third space',5:'authenticity',15:'warmth',25:'value',27:'co-creation',35:'sense of belonging'};
+    this.pos=null;this.dragging=false;this.cur=null;this.liftIdx=-1;this.strokes=[];this.activeStroke=null;
+    this._onDragMove=(e)=>this.dragMove(e);this._onDragUp=()=>this.dragUp();
+  }
+  componentDidMount(){
+    this.mounted=true;
+    try{if('scrollRestoration' in history)history.scrollRestoration='manual';}catch(e){}
+    window.scrollTo(0,0);
+    this.fine=window.matchMedia&&window.matchMedia('(pointer:fine)').matches;
+    this.initCursor();this.startClock();
+    if(!this.skip){
+      this.syncLock();
+      this._t1=setTimeout(()=>this.setState({introStep:1}),200);
+      this._t2=setTimeout(()=>this.beginFade(),2450);
+      this._t3=setTimeout(()=>this.finishIntro(),3350);
+      this.onAdvance=()=>this.skipIntroNow();
+      window.addEventListener('wheel',this.onAdvance,{passive:true});
+      window.addEventListener('keydown',this.onAdvance);
+      window.addEventListener('touchstart',this.onAdvance,{passive:true});
+    }
+    this.loadDots();
+    this.onResize=()=>{
+      const m=window.matchMedia('(max-width:719px)').matches;
+      if(m!==this.state.isMobile)this.setState({isMobile:m},()=>{if(this.outer)this.buildDots();});
+      else this.layoutDots();
+    };
+    window.addEventListener('resize',this.onResize);
+  }
+  componentWillUnmount(){
+    this.mounted=false;
+    clearTimeout(this._t1);clearTimeout(this._t2);clearTimeout(this._t3);
+    clearInterval(this.clock);cancelAnimationFrame(this.cursorRaf);
+    window.removeEventListener('resize',this.onResize);
+    this.removeAdvance();
+    window.removeEventListener('pointermove',this._onDragMove);
+    window.removeEventListener('pointerup',this._onDragUp);
+    window.removeEventListener('pointercancel',this._onDragUp);
+    window.removeEventListener('blur',this._onDragUp);
+    if(this.onMove)window.removeEventListener('pointermove',this.onMove);
+    if(this.onOver)window.removeEventListener('mouseover',this.onOver);
+    if(this._esc)window.removeEventListener('keydown',this._esc);
+    document.body.style.overflow='';
+  }
+  removeAdvance(){
+    if(!this.onAdvance)return;
+    window.removeEventListener('wheel',this.onAdvance);window.removeEventListener('keydown',this.onAdvance);window.removeEventListener('touchstart',this.onAdvance);
+    this.onAdvance=null;
+  }
+  componentDidUpdate(prev){
+    if(prev.accent!==this.props.accent&&this.cursorRef.current)this.cursorRef.current.style.background=this.props.accent||'#8FBCDF';
+    if(prev.dotsCount!==this.props.dotsCount&&this.outer)this.buildDots();
+    if(prev.forceMobile!==this.props.forceMobile&&this.outer)this.buildDots();
+    if(this.props.showIntro===false&&!this.state.overlayGone)this.skipIntroNow();
+  }
+  isMob(){return this.props.forceMobile===true?true:this.state.isMobile;}
+  syncLock(){document.body.style.overflow=(!this.state.overlayGone||this.state.menuOpen)?'hidden':'';}
+  beginFade(){this.setState({introStep:2});}
+  finishIntro(){this.removeAdvance();this.setState({overlayGone:true,introStep:3},()=>this.syncLock());}
+  skipIntroNow(){
+    if(this.state.overlayGone||this._skipping)return;
+    this._skipping=true;
+    clearTimeout(this._t1);clearTimeout(this._t2);clearTimeout(this._t3);
+    this.beginFade();
+    setTimeout(()=>{if(this.mounted)this.finishIntro();},700);
+  }
+  openMenu(){
+    this.setState({menuOpen:true},()=>this.syncLock());
+    this._esc=(e)=>{if(e.key==='Escape')this.closeMenu();};
+    window.addEventListener('keydown',this._esc);
+  }
+  closeMenu(){
+    if(this._esc){window.removeEventListener('keydown',this._esc);this._esc=null;}
+    this.setState({menuOpen:false},()=>this.syncLock());
+  }
+  startClock(){
+    let fmt=null;
+    try{fmt=new Intl.DateTimeFormat('sl-SI',{timeZone:'Europe/Ljubljana',hour:'2-digit',minute:'2-digit',second:'2-digit',hour12:false});}catch(e){}
+    const tick=()=>{let t='';try{t=fmt?fmt.format(new Date()):new Date().toLocaleTimeString();}catch(e){t=new Date().toLocaleTimeString();}this.setState({time:t});};
+    tick();this.clock=setInterval(tick,1000);
+  }
+  async loadDots(){
+    try{
+      const res=await fetch('assets/Logotip%20Perennial.svg');
+      const txt=await res.text();
+      const doc=new DOMParser().parseFromString(txt,'image/svg+xml');
+      const holder=document.createElement('div');
+      holder.style.cssText='position:absolute;width:0;height:0;overflow:hidden;';
+      holder.appendChild(document.importNode(doc.documentElement,true));
+      document.body.appendChild(holder);
+      const paths=holder.querySelectorAll('path,polygon,polyline,circle,ellipse');
+      const clusters=[];
+      paths.forEach((p)=>{
+        const L=p.getTotalLength();if(!L)return;
+        const M=Math.max(200,Math.round(L/2));
+        let cl=[];const step=L/M;
+        let prev=null;
+        for(let i=0;i<=M;i++){
+          const pt=p.getPointAtLength(step*i);
+          if(prev){const d=Math.hypot(pt.x-prev.x,pt.y-prev.y);if(d>step*6){if(cl.length>4)clusters.push(cl);cl=[];}}
+          cl.push({x:pt.x,y:pt.y});prev=pt;
+        }
+        if(cl.length>4)clusters.push(cl);
+      });
+      holder.remove();
+      clusters.sort((a,b)=>b.length-a.length);
+      if(!clusters.length)throw new Error('no geometry');
+      this.outer=clusters[0];this.hole=clusters[1]||null;
+    }catch(e){
+      const o=[],h=[];
+      for(let i=0;i<120;i++){const a=i/120*6.2832;const r=1+0.18*Math.sin(a*3)+0.1*Math.sin(a*5);o.push({x:Math.cos(a)*r,y:Math.sin(a)*r});}
+      for(let i=0;i<30;i++){const a=i/30*6.2832;h.push({x:Math.cos(a)*0.34+0.18,y:Math.sin(a)*0.34-0.1});}
+      this.outer=o;this.hole=h;
+    }
+    this.buildDots();
+  }
+  orient(arr){
+    let ti=0;
+    for(let i=1;i<arr.length;i++){if(arr[i].y<arr[ti].y)ti=i;}
+    let r=arr.slice(ti).concat(arr.slice(0,ti));
+    if(r.length>2&&r[1].x<r[0].x){r=r.slice().reverse();let t2=0;for(let i=1;i<r.length;i++){if(r[i].y<r[t2].y)t2=i;}r=r.slice(t2).concat(r.slice(0,t2));}
+    return r;
+  }
+  resample(arr,n){
+    const out=[];
+    for(let i=0;i<n;i++)out.push(arr[Math.floor(arr.length*i/n)]);
+    return out;
+  }
+  buildDots(){
+    const base=Math.max(12,Math.min(60,Math.round(this.props.dotsCount??50)));
+    const N=this.isMob()?Math.min(base,36):base;
+    let pts,lift=-1;
+    if(this.hole){
+      const holeN=Math.max(8,Math.round(N*this.hole.length/(this.hole.length+this.outer.length)));
+      const outerN=N-holeN;
+      pts=this.orient(this.resample(this.outer,outerN)).concat(this.orient(this.resample(this.hole,holeN)));
+      lift=outerN;
+    }else{pts=this.orient(this.resample(this.outer,N));}
+    this.liftIdx=lift;
+    let minX=1e9,maxX=-1e9,minY=1e9,maxY=-1e9;
+    pts.forEach((p)=>{minX=Math.min(minX,p.x);maxX=Math.max(maxX,p.x);minY=Math.min(minY,p.y);maxY=Math.max(maxY,p.y);});
+    const spanX=Math.max(maxX-minX,0.0001);
+    this.ar=(maxY-minY)/spanX;
+    this.dotsN=pts.map((p)=>({x:(p.x-minX)/spanX,y:(p.y-minY)/spanX}));
+    this._dotDown=this.dotsN.map((p,i)=>(e)=>this.dotDown(e,i));
+    this.setState({dotsReady:true,conn:0,won:false,dotsFront:false,closedOuter:false,closedInner:false},()=>this.layoutDots());
+  }
+  layoutDots(){
+    const el=this.gameRef.current;
+    if(!el||!this.dotsN)return;
+    const W=el.clientWidth,H=el.clientHeight;
+    if(!W||!H)return;
+    const fs=Math.min(Math.max(W*0.0255,22),38);const s=Math.min(W*0.94,(H-fs*6)/this.ar);
+    const ox=(W-s)/2,oy=Math.min((H-s*this.ar)*0.5,fs*3);
+    this.pos=this.dotsN.map((p)=>({x:ox+p.x*s,y:oy+p.y*s}));
+    this.inside=this.pos.map(()=>false);
+    const v=this.videoRef.current;
+    if(v){
+      const gr=el.getBoundingClientRect(),vr=v.getBoundingClientRect();
+      const rx=vr.left-gr.left-8,ry=vr.top-gr.top-8,rx2=rx+vr.width+16,ry2=ry+vr.height+16;
+      this.inside=this.pos.map((p)=>p.x>rx&&p.x<rx2&&p.y>ry&&p.y<ry2);
+    }
+    const c=this.lineRef.current;
+    if(c){c.width=W;c.height=H;}
+    this.setState({dots:this.pos.slice()});
+    this.redraw();
+  }
+  needsClose(){return this.liftIdx>0&&this.state.conn===this.liftIdx&&!this.state.closedOuter;}
+  closeOuter(){
+    this.setState({closedOuter:true});
+    this.redraw(this.state.conn,true);
+  }
+  dotDown(e,i){
+    if(e&&e.preventDefault)e.preventDefault();
+    if(e&&e.stopPropagation)e.stopPropagation();
+    if(this.state.won||!this.pos)return;
+    if(this.state.conn===0&&i!==0)return;
+    this.startDrag(e);
+    const c=this.state.conn;
+    if(this.needsClose()){if(i===0)this.closeOuter();}
+    else if(this.needsCloseInner()){if(i===this.liftIdx)this.closeInner();}
+    else if(i===c)this.connectDot(i);
+  }
+  needsCloseInner(){return this.liftIdx>0&&this.state.conn>=(this.pos?this.pos.length:0)&&!this.state.closedInner;}
+  closeInner(){
+    this.setState({closedInner:true});
+    setTimeout(()=>{if(this.mounted)this.setState({won:true});},650);
+  }
+  checkHit(){
+    if(!this.cur||!this.pos)return;
+    if(this.needsClose()){
+      const t0=this.pos[0];
+      if(Math.hypot(this.cur.x-t0.x,this.cur.y-t0.y)<30)this.closeOuter();
+    }else if(this.state.conn<this.pos.length){
+      const t=this.pos[this.state.conn];
+      if(Math.hypot(this.cur.x-t.x,this.cur.y-t.y)<30)this.connectDot(this.state.conn);
+    }else if(this.needsCloseInner()){
+      const tl=this.pos[this.liftIdx];
+      if(Math.hypot(this.cur.x-tl.x,this.cur.y-tl.y)<30)this.closeInner();
+    }
+  }
+  startDrag(e){
+    this.dragging=true;
+    this.updateCur(e);
+    this.activeStroke=this.cur?[{x:this.cur.x,y:this.cur.y}]:[];
+    this.checkHit();
+    window.addEventListener('pointermove',this._onDragMove);
+    window.addEventListener('pointerup',this._onDragUp);
+    window.addEventListener('pointercancel',this._onDragUp);
+    window.addEventListener('blur',this._onDragUp);
+  }
+  updateCur(e){
+    const el=this.gameRef.current;if(!el)return;
+    const r=el.getBoundingClientRect();
+    this.cur={x:e.clientX-r.left,y:e.clientY-r.top};
+  }
+  dragMove(e){
+    if(!this.dragging||!this.pos)return;
+    if(e.pointerType!=='touch'&&e.buttons===0){this.dragUp();return;}
+    this.updateCur(e);
+    if(this.activeStroke&&this.cur){
+      const lp=this.activeStroke[this.activeStroke.length-1];
+      if(!lp||Math.hypot(this.cur.x-lp.x,this.cur.y-lp.y)>3)this.activeStroke.push({x:this.cur.x,y:this.cur.y});
+    }
+    this.checkHit();
+    this.redraw();
+  }
+  dragUp(){
+    if(this.activeStroke&&this.activeStroke.length>1)this.strokes.push(this.activeStroke);
+    this.activeStroke=null;
+    this.dragging=false;this.cur=null;
+    window.removeEventListener('pointermove',this._onDragMove);
+    window.removeEventListener('pointerup',this._onDragUp);
+    window.removeEventListener('pointercancel',this._onDragUp);
+    window.removeEventListener('blur',this._onDragUp);
+    this.redraw();
+  }
+  connectDot(i){
+    if(this.liftIdx>0&&i===this.liftIdx&&!this.state.closedOuter)return;
+    const conn=i+1;
+    const upd={conn:conn};
+    if(conn>=2&&!this.state.dotsFront)upd.dotsFront=true;
+    this.setState(upd);
+    if(conn>=this.pos.length&&this.liftIdx<=0){
+      this.dragging=false;
+      window.removeEventListener('pointermove',this._onDragMove);
+      window.removeEventListener('pointerup',this._onDragUp);
+      setTimeout(()=>{if(this.mounted)this.setState({won:true});},650);
+    }
+    this.redraw(conn);
+  }
+  redraw(connArg,closedArg){
+    const c=this.lineRef.current;
+    if(!c||!this.pos)return;
+    const ctx=c.getContext('2d');
+    ctx.clearRect(0,0,c.width,c.height);
+    const conn=connArg!=null?connArg:this.state.conn;
+    const closed=closedArg!=null?closedArg:this.state.closedOuter;
+    const N=this.pos.length,lift=this.liftIdx;
+    ctx.lineWidth=2;ctx.lineJoin='round';ctx.lineCap='round';ctx.strokeStyle='#26417d';
+    const all=this.activeStroke?this.strokes.concat([this.activeStroke]):this.strokes;
+    for(let si=0;si<all.length;si++){
+      const st=all[si];
+      if(!st||st.length<2)continue;
+      ctx.beginPath();ctx.moveTo(st[0].x,st[0].y);
+      for(let j=1;j<st.length;j++)ctx.lineTo(st[j].x,st[j].y);
+      ctx.stroke();
+    }
+  }
+  initCursor(){
+    const el=this.cursorRef.current;
+    if(el&&this.props.accent)el.style.background=this.props.accent;
+    if(!this.fine){if(el)el.style.display='none';return;}
+    this.cx=-100;this.cy=-100;this.txp=-100;this.typ=-100;this.hov=1;this.hovT=1;
+    this.onMove=(e)=>{this.txp=e.clientX;this.typ=e.clientY;if(this.cx===-100){this.cx=this.txp;this.cy=this.typ;}};
+    window.addEventListener('pointermove',this.onMove);
+    this.onOver=(e)=>{const t=e.target&&e.target.closest?e.target.closest('a,[data-hov]'):null;this.hovT=t?1.25:1;};
+    window.addEventListener('mouseover',this.onOver);
+    const loop=()=>{
+      if(!this.mounted)return;
+      this.cursorRaf=requestAnimationFrame(loop);
+      const el2=this.cursorRef.current;if(!el2)return;
+      const nx=this.cx+(this.txp-this.cx)*0.17,ny=this.cy+(this.typ-this.cy)*0.17;
+      const vx=nx-this.cx,vy=ny-this.cy;this.cx=nx;this.cy=ny;
+      const sp=Math.hypot(vx,vy);
+      this.hov+=(this.hovT-this.hov)*0.16;
+      const st=Math.min(sp*0.03,0.6);
+      const ang=sp>0.2?Math.atan2(vy,vx):0;
+      el2.style.transform='translate('+(nx-13)+'px,'+(ny-13)+'px) rotate('+ang.toFixed(3)+'rad) scale('+((1+st)*this.hov).toFixed(3)+','+(this.hov/(1+st)).toFixed(3)+')';
+    };
+    loop();
+  }
+  mkGo(id){
+    return (e)=>{
+      if(e&&e.preventDefault)e.preventDefault();
+      if(this.state.menuOpen)this.closeMenu();
+      const el=document.getElementById(id);
+      if(el)window.scrollTo({top:el.getBoundingClientRect().top+window.scrollY-20,behavior:'smooth'});
+    };
+  }
+  renderVals(){
+    const s=this.state;
+    const M=this.isMob();
+    if(!this._init){
+      this._init=1;
+      this._skip=()=>this.skipIntroNow();
+      this._openMenu=()=>this.openMenu();
+      this._closeMenu=(e)=>{if(e&&e.preventDefault)e.preventDefault();this.closeMenu();};
+      this._goTop=(e)=>{if(e&&e.preventDefault)e.preventDefault();if(this.state.menuOpen)this.closeMenu();window.scrollTo({top:0,behavior:'smooth'});};
+      this._goAbout=this.mkGo('about');this._goJournal=this.mkGo('team');this._goContact=this.mkGo('footer');
+      this._reset=(e)=>{if(e&&e.preventDefault)e.preventDefault();this.strokes=[];this.activeStroke=null;this.setState({conn:0,won:false,dotsFront:false,closedOuter:false,closedInner:false});this.redraw(0,false);};
+      this._closeWin=()=>this.setState({won:false});
+      this._gameDown=(e)=>{
+        if(e&&e.pointerType==='touch')return;
+        if(this.state.won||!this.pos||this.state.conn===0)return;
+        if(e&&e.preventDefault)e.preventDefault();
+        this.startDrag(e);
+      };
+    }
+    const closing=this.liftIdx>0&&s.conn===this.liftIdx&&!s.closedOuter;
+    const N=(s.dots||[]).length;
+    const expectedIdx=closing?0:(this.liftIdx>0&&s.conn>=N&&N>0&&!s.closedInner?this.liftIdx:s.conn);
+    const dots=(s.dots||[]).map((p,i)=>{
+      const num=i+1;
+      const dim=s.conn<2&&i!==0&&i!==expectedIdx;
+      return {
+        num:num,l:p.x+'px',t:p.y+'px',
+        op:dim?0.5:1,pe:'auto',
+        labelOp:i<s.conn?1:0,
+        bg:i<s.conn?'#8FBCDF':'#c9c4b8',
+        numColor:i<s.conn?'#8FBCDF':'#b7b2a6',
+        numFs:M?'11px':'14px',
+        hasLabel:!!this.labels[num],label:this.labels[num]||'',
+        down:this._dotDown?this._dotDown[i]:null
+      };
+    });
+    const p0=this.pos&&this.pos[0];
+    return {
+      manifestPad:(M?Math.max(0,(this.props.manifestTop??39)-9):(this.props.manifestTop??39))+'vh 0 '+(this.props.manifestBottom??12)+'vh',
+      teamMB:(this.props.teamBottom??0)+'vh',
+      teamTextTop:(this.props.teamTop??32)+'vh',
+      videoAspect:'16 / 9',
+      thatsUsLeft:M?'35%':'-2.6em',
+      thatsUsTop:M?'-1.7em':'0.15em',
+      helloLeft:M?'38%':'1.2em',
+      okayyLeft:M?'28%':'0.5em',
+      contactMB:M?'0 0 '+(this.props.mobileContactGap??0)+'vw 5vw':'0 0 -12.13vw 5vw',
+      tkB:M?(this.props.mobileTiktok??27)+'vw':'19vw',
+      igB:M?(this.props.mobileInstagram??39)+'vw':'23.5vw',
+      goodRight:M?'1.6em':'-5.7em',
+      goodTop:M?'calc(100% + 0.5em)':'112.62px',
+      goodMaxW:M?'12em':'7.5em',
+      footerTop:M?'16vh':'60vh',
+      wmTopM:M?(this.props.mobileWordmarkTop??-10.5)+'vw':'0px',
+      wmMargin:M?'0 0 '+(this.props.mobileWordmarkBottom??-1.3)+'vw -8.21vw':'0 0 -4.71vw -8.21vw',
+      time:s.time,navDisplay:M?'none':'flex',
+      showOverlay:!s.overlayGone,
+      overlayOp:s.introStep>=2?0:1,
+      overlayPE:s.introStep>=2?'none':'auto',
+      logoOp:s.introStep>=1?1:0,
+      logoTf:s.introStep>=1?'scale(1)':'scale(0.86)',
+      logoBlur:s.introStep>=1?'blur(0px)':'blur(16px)',
+      skipOp:s.introStep===1?1:0,
+      skipIntro:this._skip,
+      openMenu:this._openMenu,closeMenu:this._closeMenu,
+      menuX:s.menuOpen?'translateX(0px)':'translateX(calc(100% + 26px))',
+      menuBgOp:s.menuOpen?1:0,menuBgPE:s.menuOpen?'auto':'none',
+      goTop:this._goTop,goAbout:this._goAbout,goJournal:this._goJournal,goContact:this._goContact,
+      gameRef:this.gameRef,lineRef:this.lineRef,cursorRef:this.cursorRef,
+      dots:dots,dotsZ:s.conn>=2?6:4,videoRef:this.videoRef,
+      hintL:p0?(p0.x+14)+'px':'50%',hintT:p0?(p0.y-28)+'px':'10%',
+      hintOp:(s.dotsReady&&s.conn===0)?1:0,
+      showWin:s.won,closeWin:this._closeWin,resetGame:this._reset,gameDown:this._gameDown
+    };
+  }
+}
+</script>
+</body>
+</html>
