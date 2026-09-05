@@ -4,9 +4,14 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
-<title>Perennial — Footer</title>
+<title>perennial — creative studio</title>
 
 <style>
+
+/* =========================================================
+   FONTS
+   ========================================================= */
+
 @font-face {
   font-family: 'Mundial';
   src: url('assets/MundialHair.otf') format('opentype');
@@ -37,10 +42,10 @@
   font-display: swap;
 }
 
-/* RESET */
-* {
-  box-sizing: border-box;
-}
+
+/* =========================================================
+   RESET
+   ========================================================= */
 
 html,
 body {
@@ -55,7 +60,17 @@ body {
   font-family: 'Mundial', 'Helvetica Neue', sans-serif;
   color: #141414;
   -webkit-font-smoothing: antialiased;
+
+  /*
+    IMPORTANT:
+    The original footer was intended to be a single
+    viewport composition, so scrolling is disabled.
+  */
   overflow: hidden;
+}
+
+* {
+  box-sizing: border-box;
 }
 
 a {
@@ -63,15 +78,23 @@ a {
   text-decoration: none;
 }
 
-/* FOOTER */
-.footer {
+
+/* =========================================================
+   FOOTER
+   ========================================================= */
+
+#footer {
   position: relative;
-  width: 100vw;
+
+  /*
+    Use dynamic viewport height so mobile browser UI
+    doesn't break the composition.
+  */
+  width: 100%;
   height: 100svh;
   min-height: 100svh;
-  overflow: hidden;
 
-  border-radius: 0;
+  overflow: hidden;
 
   background:
     #f2f1ef
@@ -81,86 +104,127 @@ a {
   background-size: 170px 170px;
 }
 
-/* SOCIAL LINKS */
-.social {
-  position: absolute;
-  z-index: 5;
 
-  font-family: 'PerennialMade',
+/* =========================================================
+   SOCIAL LINKS
+   ORIGINAL RESPONSIVE POSITIONING
+   ========================================================= */
+
+#footer .tiktok {
+  position: absolute;
+
+  left: 47%;
+  bottom: 19vw;
+
+  font-family:
+    'PerennialMade',
     'Shadows Into Light',
     cursive;
 
-  font-size: clamp(20px, 2vw, 30px);
+  font-size: clamp(19px, 1.9vw, 27px);
   line-height: 1;
 
-  white-space: nowrap;
+  color: #141414;
 
-  transition:
-    transform 0.25s ease,
-    font-style 0.25s ease;
-}
-
-
-.tiktok {
-  left: 47%;
-  bottom: 36vh;
   transform: rotate(-3deg);
-}
 
-.instagram {
-  left: 60%;
-  bottom: 40vh;
-  transform: rotate(-1deg);
+  transition: transform 0.3s ease;
 }
 
 
-
-/* CONTACT */
-.contact {
+#footer .instagram {
   position: absolute;
-  z-index: 5;
 
-  left: 5vw;
-  bottom: 30vh;
+  left: 60%;
+  bottom: 23.5vw;
+
+  font-family:
+    'Blah Blah Bang',
+    'Shadows Into Light',
+    cursive;
+
+  font-size: clamp(19px, 1.9vw, 27px);
+  line-height: 1;
+
+  color: #141414;
+
+  transform: rotate(-1deg);
+
+  transition: transform 0.3s ease;
+}
+
+
+/* =========================================================
+   CONTACT
+   ORIGINAL DESKTOP GEOMETRY
+   ========================================================= */
+
+#footer .contact {
+  position: relative;
+  z-index: 1;
+
+  margin: 0 0 -12.13vw 5vw;
 
   font-size: clamp(15px, 1.4vw, 20px);
   line-height: 1.45;
 }
 
-
-/* GIANT WORDMARK */
-.wordmark {
-  position: absolute;
-
-  left: 0;
-  right: 0;
-  bottom: -4.71vw;
-
-  width: 100%;
-  overflow: hidden;
-
-  line-height: 0;
+#footer .contact a {
+  color: #141414;
 }
 
-.wordmark img {
+
+/* =========================================================
+   GIANT WORDMARK
+   ORIGINAL GEOMETRY
+   ========================================================= */
+
+#footer .wordmark-container {
+  position: relative;
+
+  overflow: hidden;
+
+  margin: 0;
+}
+
+
+/*
+  This is the original giant wordmark:
+
+  width: 115vw
+  margin-left: -8.21vw
+  margin-bottom: -4.71vw
+
+  Do NOT change these to fixed pixel values.
+  The vw relationship is what keeps the wordmark
+  scaling with the viewport.
+*/
+
+#footer .wordmark {
   display: block;
 
   width: 115vw;
   max-width: none;
   height: auto;
 
-  margin-left: -8.21vw;
+  margin:
+    0
+    0
+    -4.71vw
+    -8.21vw;
 }
 
-/* COPYRIGHT */
-.copyright {
+
+/* =========================================================
+   COPYRIGHT
+   ========================================================= */
+
+#footer .copyright {
   position: absolute;
 
   left: 0;
   right: 0;
   bottom: 1.1vw;
-
-  z-index: 10;
 
   text-align: center;
 
@@ -170,101 +234,171 @@ a {
   color: #a09b90;
 }
 
-/* TABLET */
-@media (max-width: 900px) {
 
-  .tiktok {
-    left: 45%;
-    bottom: 18vh;
-  }
+/* =========================================================
+   DESKTOP FOOTER STRUCTURE
+   ========================================================= */
 
-  .instagram {
-    left: 58%;
-    bottom: 23vh;
-  }
+#footer .footer-content {
+  position: absolute;
 
-  .contact {
-    bottom: 17vh;
-  }
+  left: 0;
+  right: 0;
+  bottom: 0;
 
-  .wordmark img {
-    width: 125vw;
-    margin-left: -12vw;
-  }
+  /*
+    This preserves the original footer's
+    bottom-up composition.
+  */
 }
 
-/* MOBILE */
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
 @media (max-width: 719px) {
 
-  .footer {
+  #footer {
+    width: 100%;
     height: 100svh;
     min-height: 100svh;
+
+    overflow: hidden;
   }
 
-  .tiktok {
+
+  /*
+    ORIGINAL MOBILE SOCIAL POSITIONING
+
+    These remain in vw rather than being converted
+    to vh, because the original design intentionally
+    scales these positions with the width of the phone.
+  */
+
+  #footer .tiktok {
     left: 35%;
+
     bottom: 27vw;
-    font-size: clamp(19px, 5.5vw, 27px);
+
+    font-size: clamp(19px, 1.9vw, 27px);
+
+    transform: rotate(-3deg);
   }
 
-  .instagram {
+
+  #footer .instagram {
     left: 60%;
+
     bottom: 39vw;
-    font-size: clamp(19px, 5.5vw, 27px);
+
+    font-size: clamp(19px, 1.9vw, 27px);
+
+    transform: rotate(-1deg);
   }
 
-  .contact {
-    left: 5vw;
-    bottom: 25vw;
 
-    font-size: clamp(15px, 4vw, 20px);
+  /*
+    ORIGINAL MOBILE CONTACT POSITIONING
+  */
+
+  #footer .contact {
+    margin:
+      0
+      0
+      0
+      5vw;
+
+    position: absolute;
+
+    left: 0;
+    bottom: 0;
+
+    font-size: clamp(15px, 1.4vw, 20px);
+    line-height: 1.45;
   }
 
-  .wordmark {
-    bottom: -1.3vw;
+
+  /*
+    ORIGINAL MOBILE WORDMARK POSITIONING
+
+    The original used:
+
+      top: -10.5vw
+      bottom: -1.3vw
+      margin-left: -8.21vw
+
+    The negative values are intentional and create
+    the oversized cropped wordmark.
+  */
+
+  #footer .wordmark-container {
+    position: absolute;
+
+    left: 0;
+    right: 0;
+
+    bottom: 0;
+
+    overflow: hidden;
+
+    margin-top: -10.5vw;
   }
 
-  .wordmark img {
+
+  #footer .wordmark {
     width: 115vw;
-    margin-left: -8.21vw;
+    max-width: none;
+    height: auto;
+
+    margin:
+      0
+      0
+      -1.3vw
+      -8.21vw;
   }
 
-  .copyright {
-    bottom: 2.5vw;
+
+  #footer .copyright {
+    bottom: 1.1vw;
+
     font-size: 11px;
   }
 }
 
-/* VERY SMALL PHONES */
-@media (max-width: 400px) {
 
-  .tiktok {
+/* =========================================================
+   VERY NARROW MOBILE SCREENS
+   ========================================================= */
+
+@media (max-width: 380px) {
+
+  #footer .tiktok {
     left: 30%;
   }
 
-  .instagram {
+  #footer .instagram {
     left: 55%;
   }
 
-  .contact {
-    bottom: 27vw;
+  #footer .contact {
+    margin-left: 5vw;
   }
 
-  .wordmark img {
-    width: 125vw;
-    margin-left: -12vw;
-  }
 }
+
 </style>
 </head>
 
+
 <body>
 
-<footer class="footer">
+<footer id="footer">
 
-  <!-- SOCIAL -->
+  <!-- SOCIAL LINKS -->
+
   <a
-    class="social tiktok"
+    class="tiktok"
     href="https://www.tiktok.com/@perennial.made"
     target="_blank"
     rel="noreferrer"
@@ -272,8 +406,9 @@ a {
     TIKTOK
   </a>
 
+
   <a
-    class="social instagram"
+    class="instagram"
     href="https://www.instagram.com/perennial.made"
     target="_blank"
     rel="noreferrer"
@@ -281,24 +416,33 @@ a {
     INSTAGRAM
   </a>
 
-  <!-- CONTACT -->
-  <div class="contact">
-    +386 41 815 008<br>
 
-    <a href="mailto:info@perennialmade.com">
-      info@perennialmade.com
+  <!-- CONTACT -->
+
+  <div class="contact">
+    070 483 190<br>
+
+    <a href="mailto:perennial.made@gmail.com">
+      perennial.made@gmail.com
     </a>
   </div>
 
+
   <!-- GIANT PERENNIAL WORDMARK -->
-  <div class="wordmark">
+
+  <div class="wordmark-container">
+
     <img
+      class="wordmark"
       src="assets/IME_perennail.png"
       alt="perennial"
     >
+
   </div>
 
+
   <!-- COPYRIGHT -->
+
   <div class="copyright">
     all rights reserved @perennial 2026
   </div>
@@ -307,3 +451,23 @@ a {
 
 </body>
 </html>
+```
+
+**One important correction from my previous version:** I would **not** use `bottom: 30vh`, `34vh`, etc. for this design. Your original was deliberately built around **`vw` positioning**, which means the text and giant wordmark maintain their relationship as the browser changes shape.
+
+Also, the original DC code had these exact responsive values:
+
+* Desktop TIKTOK: `bottom: 19vw`
+* Desktop INSTAGRAM: `bottom: 23.5vw`
+* Desktop contact: `margin: 0 0 -12.13vw 5vw`
+* Wordmark: `width: 115vw`
+* Wordmark: `margin-left: -8.21vw`
+* Wordmark bottom: `-4.71vw`
+* Mobile TIKTOK: `bottom: 27vw`
+* Mobile INSTAGRAM: `bottom: 39vw`
+* Mobile wordmark top: `-10.5vw`
+* Mobile wordmark bottom: `-1.3vw`
+
+Those relationships are what we want to preserve rather than manually pushing things around.
+
+If the **actual visual target is the footer exactly as it appeared in the old site**, the safest next step is to preserve the original footer's *entire layout hierarchy* even more literally and only delete the sections above it. That would avoid changing its geometry at all.
