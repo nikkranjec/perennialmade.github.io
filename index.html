@@ -107,7 +107,8 @@ a {
 
   border: 0;
 
-  box-shadow: 0;
+  /* FIX: `box-shadow: 0` is invalid CSS */
+  box-shadow: none;
 }
 
 
@@ -115,10 +116,15 @@ a {
    SOCIAL LINKS
    These remain independently positioned relative
    to the footer, using VW exactly as intended.
+
+   FIX: z-index lifts them above .bottom-composition
+   (which is positioned later in the DOM and was
+   covering them, blocking clicks).
    ========================================================= */
 
 #footer .tiktok {
   position: absolute;
+  z-index: 5;
 
   left: 50%;
   bottom: 19vw;
@@ -136,11 +142,14 @@ a {
   transition: transform 0.3s ease;
 }
 
-
+#footer .tiktok:hover {
+  transform: rotate(-3deg) scale(1.06);
+}
 
 
 #footer .instagram {
   position: absolute;
+  z-index: 5;
 
   left: 64%;
   bottom: 23.5vw;
@@ -158,19 +167,21 @@ a {
   transition: transform 0.3s ease;
 }
 
+#footer .instagram:hover {
+  transform: rotate(-1deg) scale(1.06);
+}
 
 
 /* =========================================================
    BOTTOM COMPOSITION
    Contact + wordmark stay in the same flow.
-
-   This is the key fix:
-   the whole composition is anchored to the bottom,
-   while the elements inside retain their VW geometry.
+   Anchored to the bottom; elements inside retain
+   their VW geometry.
    ========================================================= */
 
 #footer .bottom-composition {
   position: absolute;
+  z-index: 1;
 
   left: 0;
   right: 0;
@@ -202,8 +213,6 @@ a {
 #footer .contact a {
   color: #141414;
 }
-
-
 
 
 /* =========================================================
@@ -269,11 +278,6 @@ a {
     min-height: 100svh;
   }
 
-
-  /* ---------------------------------------------------------
-     SOCIAL
-     --------------------------------------------------------- */
-
   #footer .tiktok {
     left: 45%;
     bottom: 30vw;
@@ -283,8 +287,6 @@ a {
     transform: rotate(-3deg);
   }
 
-  
-
   #footer .instagram {
     left: 64%;
     bottom: 41vw;
@@ -293,15 +295,6 @@ a {
 
     transform: rotate(-1deg);
   }
-
-  
-
-  /* ---------------------------------------------------------
-     CONTACT
-     
-     Original mobile geometry:
-     margin: 0 0 0 5vw
-     --------------------------------------------------------- */
 
   #footer .contact {
     margin:
@@ -314,16 +307,6 @@ a {
     line-height: 1.45;
   }
 
-
-  /* ---------------------------------------------------------
-     WORDMARK
-
-     Original mobile geometry:
-     wordmark container: -10.5vw
-     wordmark bottom:    -1.3vw
-     wordmark left:      -8.21vw
-     --------------------------------------------------------- */
-
   #footer .wordmark-wrap {
     margin:
       -10.5vw
@@ -331,7 +314,6 @@ a {
       0
       0;
   }
-
 
   #footer .wordmark {
     width: 115vw;
@@ -344,7 +326,6 @@ a {
       -1.3vw
       -8.21vw;
   }
-
 
   #footer .copyright {
     bottom: 1.1vw;
@@ -382,46 +363,31 @@ a {
 
 <footer id="footer">
 
-
-  <!-- =====================================================
-       SOCIAL LINKS
-       ===================================================== -->
+  <!-- SOCIAL LINKS -->
 
   <a
     class="tiktok"
     href="https://www.tiktok.com/@perennial.made"
     target="_blank"
-    rel="noreferrer"
+    rel="noopener noreferrer"
   >TIKTOK</a>
-
 
   <a
     class="instagram"
     href="https://www.instagram.com/perennial.made"
     target="_blank"
-    rel="noreferrer"
+    rel="noopener noreferrer"
   >INSTAGRAM</a>
 
 
-  <!-- =====================================================
-       BOTTOM COMPOSITION
-       ===================================================== -->
+  <!-- BOTTOM COMPOSITION -->
 
   <div class="bottom-composition">
 
-
-    <!-- CONTACT -->
-
     <div class="contact">
       +386 41 815 088<br>
-
-      <a href="mailto:info@perennialmade.com">
-        info@perennialmade.com
-      </a>
+      <a href="mailto:info@perennialmade.com">info@perennialmade.com</a>
     </div>
-
-
-    <!-- GIANT PERENNIAL WORDMARK -->
 
     <div class="wordmark-wrap">
 
