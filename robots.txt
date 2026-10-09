@@ -1,3 +1,0 @@
-User-agent: *
-Allow: /
-Sitemap: https://perennialmade.com/sitemap.xml
