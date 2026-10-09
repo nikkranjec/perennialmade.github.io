@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="sl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<meta name="theme-color" content="#f2f1ef">
+<title>Perennial</title>
+<meta name="description" content="Perennial — kreativni studio, ki s partnerji oblikuje komunikacijo od začetne ideje do njene končne podobe. Ljubljana.">
+<link rel="icon" type="image/png" href="assets/favicon.png">
+<link rel="canonical" href="https://perennialmade.com/">
+<meta property="og:url" content="https://perennialmade.com/">
+<meta property="og:locale" content="sl_SI">
+<meta property="og:title" content="Perennial">
+<meta property="og:description" content="Kreativni studio, ki s partnerji oblikuje komunikacijo od začetne ideje do njene končne podobe.">
+<meta property="og:image" content="https://perennialmade.com/assets/thumbnail.png">
+<meta property="og:type" content="website">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://perennialmade.com/assets/thumbnail.png">
+<link rel="preload" href="fonts/MundialP-Regular.ttf" as="font" type="font/ttf" crossorigin>
+<link rel="preload" href="assets/InterTight-Regular.ttf" as="font" type="font/ttf" crossorigin>
+<link rel="preload" href="assets/PerennialMade-Regular.ttf" as="font" type="font/ttf" crossorigin>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header class="site-header">
+  <a class="brand" href="#top" aria-label="perennial">
+    <span class="word hand">perennial</span>
+    <span class="mark"><img src="assets/logotip.svg" alt=""></span>
+  </a>
+  <nav class="nav">
+    <a href="#o-nas">o nas</a>
+    <a href="#dela">dela</a>
+    <a href="#dnevnik">dnevnik</a>
+    <a href="#kontakt">kontakt</a>
+  </nav>
+  <div class="tagline hand"><span>za vse,</span><span>kar ostane</span></div>
+</header>
+
+<canvas id="perennial" width="1920" height="1080" aria-hidden="true"></canvas>
+<canvas id="perennial-crisp" aria-hidden="true"></canvas>
+<div id="floor-probe" aria-hidden="true"></div>
+
+<main>
+  <section class="hero" id="top">
+    <h1 class="wm" aria-label="perennial"></h1>
+    <div class="meta">
+      <a href="https://www.instagram.com/perennial.made" target="_blank" rel="noopener noreferrer">@perennial.made</a>
+      <div class="right">Ljubljana<br><span id="clock">00:00:00</span></div>
+    </div>
+  </section>
+
+  <section class="section" id="h-o-nas">
+    <p class="blurb">Smo <span class="fix"><s>video</s><span class="hand">kreativni</span></span> studio, ki s partnerji oblikuje komunikacijo od začetne ideje do njene končne podobe.</p>
+    <div class="about-photo about-video">
+      <video src="assets/hero.mp4" autoplay muted loop playsinline preload="auto" disablepictureinpicture></video>
+      <button class="vid-btn vid-play" type="button" aria-label="Pavza" aria-pressed="false">
+        <svg class="i-pause" viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round" stroke-linecap="round"><path d="M8 5v14M16 5v14"/></svg>
+        <svg class="i-play" viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round" stroke-linecap="round"><path d="M7 4.5l12 7.5-12 7.5z"/></svg>
+      </button>
+    </div>
+  </section>
+
+  <section class="section" id="h-dela">
+    <p class="blurb">Različne kreativne discipline povezujemo v <span class="fix"><s>unikaten</s><span class="hand">avtentičen</span></span> glas in vizualni jezik, ki izhajata iz tega, kar je naročniku lastno in presegata dnevne trende.</p>
+    <div class="rail-wrap">
+      <div class="rail">
+        <a href="#o-nas" aria-label="O nas"><div class="ph" style="background-image:url('assets/vibe-6.webp')"></div></a>
+        <a href="#o-nas" aria-label="O nas"><div class="ph" style="background-image:url('assets/vibe-1.webp')"></div></a>
+        <a href="#o-nas" aria-label="O nas"><div class="ph" style="background-image:url('assets/vibe-2.webp')"></div></a>
+        <a href="#o-nas" aria-label="O nas"><div class="ph" style="background-image:url('assets/vibe-3.webp')"></div></a>
+        <a href="#o-nas" aria-label="O nas"><div class="ph" style="background-image:url('assets/vibe-4.webp')"></div></a>
+        <a href="#o-nas" aria-label="O nas"><div class="ph" style="background-image:url('assets/vibe-5.webp')"></div></a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer" id="dno">
+  <div class="contact">
+    <div>041-815-088<br><a href="mailto:info@perennialmade.com">info@perennialmade.com</a></div>
+    <div class="social">
+      <a href="https://www.instagram.com/perennial.made" target="_blank" rel="noopener noreferrer">Instagram</a>
+      <a href="https://www.tiktok.com/@perennial.made" target="_blank" rel="noopener noreferrer">Tiktok</a>
+    </div>
+  </div>
+  <div class="copyright">all rights reserved @perennial 2026</div>
+</footer>
+
+<section class="view page gone" id="page-o-nas" aria-label="o nas" data-footer>
+  <div class="about-hero"><h1 class="big">rojeni<br>kreativci</h1></div>
+  <p class="blurb about-blurb">Ustvarjalci se rodimo vsi. Z besedami in navadami se ta del v nas potisne pod površje, kjer ostane tih in čaka, da ga nekaj zares prebudi. Perennial je nastal iz prepričanja, da je kreativno delo eden redkih načinov, kako to globino spet približati drugim. Podobe, zgodbe in prostori, ki jih ustvarjamo, počasi spreminjajo to, kar imamo za mogoče, zato jih ne jemljemo kot okras, ampak kot odgovornost. V svetu, ki govori hitreje, kot lahko sliši, nas ne zanima, kako glasno bo delo zadonelo, ampak kaj bo po njem ostalo med ljudmi: spomin, odnos, razlog, da se ponovno srečajo. Takšen prostor ne nastane sam od sebe. Potrebuje pozornost, potrpežljivost in dovolj praznine, da vanj lahko vstopi nekaj, česar nismo določili vnaprej. Zato delo začenjamo pri sebi, v skupnosti, ki jo gradimo, in v zaupanju, ki si ga dolgujemo. Od tam isto držo prenesemo v svoje delo.</p>
+  <ul class="services">
+    <li><span class="t">Strategija<small>01</small></span></li>
+    <li><span class="t">Znamčenje<small>02</small></span></li>
+    <li><span class="t">Video produkcija<small>03</small></span></li>
+    <li><span class="t">Fotografija<small>04</small></span></li>
+    <li><span class="t">Oblikovanje<small>05</small></span></li>
+    <li><span class="t">Družbena omrežja<small>06</small></span></li>
+    <li><span class="t">Kampanje<small>07</small></span></li>
+  </ul>
+  <div class="people"><canvas class="people-canvas" aria-label="Ekipa"></canvas></div>
+</section>
+<section class="view page gone" id="page-dela" aria-label="dela">
+  <div class="wheel">
+    <div class="wheel-title">dela</div>
+    <ol class="wheel-list"></ol>
+    <h2 class="wheel-name"></h2>
+    <div class="wheel-info"><p class="d"></p></div>
+    <div class="wheel-view">↗ Poglej</div>
+  </div>
+</section>
+<section class="view page gone" id="page-dnevnik" aria-label="dnevnik" data-footer>
+  <div class="about-hero"><h1 class="big">dnevnik</h1></div>
+  <p class="blurb about-blurb">Tu zapisujemo, kar nas zaposluje, še preden dobi obliko dela: vprašanja, opažanja, misli, ki se še iščejo. Naše ognjišče, odprto za vsakogar, ki se mu želi približati.</p>
+  <div class="journal">
+    <details class="entry" id="zapis-1">
+      <summary><span class="e-date hand">31. 8. 2026</span><span class="e-title">Zakaj?</span></summary>
+      <div class="e-body">
+        <p>Človek je resnično nenavadna žival, polna protislovij. Kolikor daleč seže naše vedenje, je edino bitje, v katerem se je vesolje odprlo in se zazrlo samo vase: snov, ki misli sama sebe, prah zvezd, ki se je nekega dne vprašal, od kod prihaja. Prav ta sposobnost, ki ga dela čudežnega, ga hkrati loči od celote, katere del je. Gora ne stoji nasproti pokrajini, volk ne opazuje krdela od zunaj. Samo človek zna stopiti korak vstran od vsega, celo od samega sebe, in se gledati, kot bi bil tujec sam sebi.</p>
+        <p>Radi mislimo, da je ta razcep večen, da je odtujenost preprosto cena, ki jo mišljenje plača za svoj obstoj. Vendar ni bilo vedno tako in nič ne pravi, da mora tako ostati. Ločenost ni naravna danost, ki bi prišla s telesom na svet. Prej je usedlina zgodovine, ki jo vsak od nas podeduje skupaj z jezikom in navadami svojega časa. Pred modernostjo človek ni živel kot popoln tujec v svetu in še danes se noben otrok ne rodi tuj obstoju, v katerega je vržen.</p>
+        <p>Rodi se namreč v eno samo nepretrgano polje intenzivnosti, naraščanja in pojemanja, svetlobe, ki se krepi in bledi, pritiska, ki se veča in izginja, in vse to prehaja eno v drugo, kot da so oči, ušesa in koža še vedno eno samo čutilo. Dojenček v tem obdobju vidi več, kot bo videl kadar koli pozneje: obraze vseh vrst razlikuje enako zlahka, tudi tiste, za katere njegove oči pozneje oslepijo, ker jih življenje, ki ga čaka, ne bo potrebovalo.</p>
+        <p>Potem pridejo besede. Z njimi se otrok ne nauči le imen stvari, temveč tudi tega, katere razlike so pomembne in katere lahko spregleda. Kar je bilo prej zaznano v vsej svoji enkratnosti, se začne prepoznavati po podobnosti: ta obraz pripada tej vrsti obrazov, ta zvok tej vrsti zvokov, ta občutek temu poimenovanju. Svet tako postaja vse bolj razumljiv, hkrati pa vse manj neposreden. Vesolje intenzivnosti postane vesolje kategorij in v tej delitvi se Resnično bivanje izgubi za vedno.</p>
+        <p>A ne popolnoma.</p>
+        <p>Nepretrgano polje ne izgine, samo potone globlje, pod raven besed in tam ostane, pripravljeno, da spet vzplava na dan, kadar nas jezik izpusti iz rok: v sanjah, v izčrpanosti, v skrajnem strahu. V ljubezni, kjer ima občutek drugega polnost, ki je ne doseže nobena beseda in noben objem in po kateri človek lahko sluti lastno veličino, morda celo tisto, kar je božjega v nas in ki je nikoli nismo znali dovolj natančno opisati. Nekje onkraj uma torej še vedno obstaja govorica, ki noče več nič pomeniti, samo še biti, kot da bi z vsakim izrazom še vedno tlelo nekaj starejšega in večjega od pomena samega.</p>
+        <p>In kar tli pod besedami, se najhitreje razplamti v obličju drugega. Svoj obraz poznamo samo iz odseva, svoj glas slišimo od znotraj in ko ga prvič slišimo posnetega, ga velikokrat komaj prepoznamo. V odnosih se nam razkrivajo deli nas samih, do katerih sami nimamo dostopa. Človek zato nikoli ni povsem zaključen v sebi. Del njegovega obstoja se vedno dogaja med njim in nekom drugim.</p>
+        <p>Bližina zato zahteva določeno mero praznine. Posodo oblikujemo iz gline, uporabna pa postane zaradi praznega prostora, ki ga nosi v sebi. Prav nič ni drugače med ljudmi. Tudi prostor med nami mora ostati dovolj odprt, da vanj lahko vstopi nekaj, česar nismo določili vnaprej in da ga ne zapolnimo takoj s svojo razlago drugega, s sodbo ali z odgovorom, pripravljenim še preden smo se zares potrudili razumeti. Takšen prostor nastaja počasi, potrpežljivo. Oblikujemo ga s pozornostjo in ga negujemo tako, da drugemu pustimo, da se v celoti razkrije. Šele vanj lahko položimo podobo ali zgodbo, ki drugega zares doseže.</p>
+        <p>Takšen prostor pa je danes vse težje graditi in ohraniti. Svet še nikoli ni toliko govoril in hkrati se zdi, da je vedno manj zares slišanega. Vsak dan nastane poplava vsebine, ki je nobena pozornost ne more več sprejeti kot celoto in v tem obilju postaja vse redkejše tisto, kar se v nas zares ohrani. Objavljamo, ker je mogoče objaviti, odgovarjamo, ker tišina na zaslonu hitro začne spominjati na izginotje. Prostor med nami tako zapolnjujemo hitreje, kot ga znamo ustvarjati in merimo odziv, še preden smo si vzeli čas razumeti, kaj smo sploh želeli povedati.</p>
+        <p>Preden je bilo mogoče glas shraniti in ga podvajati, so se ljudje zbirali okoli ognja. Danes je naš krog raztegnjen čez zaslone in časovne pasove. Še nikoli ni bil tako velik in hkrati še nikoli tako krhek. Znašli smo na razpotju, ki ga še ne razumemo povsem. Po eni strani obstaja realna nevarnost, da vsi ti novi načini komunikacije postanejo zgolj sence na steni, posnetki posnetkov, podobe, ki se sklicujejo samo na druge podobe, dokler se izvirni pomen popolnoma ne izgubi. Resničnost tvega, da postane puščava, po kateri se sprehajamo v neskončnem drsenju, ne da bi kadar koli resnično srečali drugega človeka.</p>
+        <p>Po drugi strani pa isti razvoj ponuja priložnost, kakršne še nismo imeli. Priložnost, da razvijemo nove oblike povezovanja, ki bodo združile tisto, kar nas dela ljudi v pristni prisotnosti in da poiščemo oblike pripovedovanja, ki bodo širino znale povezati z nečim zelo prvinskim: s človeško potrebo po navzočnosti in zgodbi, v kateri lahko drug drugega prepoznamo.</p>
+        <p>Morda prav zato v nas raste želja po nečem, kar ne izgine tako hitro, kot se je pojavilo. Ko toliko vsebin obstaja samo kot mimobežnih trendov, še preden so se nas utegnile zares dotakniti, začnemo drugače čutiti vrednost tistega, kar zdrži preizkus časa. Kot da presežek minljivega sam v sebi prebuja potrebo po trajanju.</p>
+        <p>Toda svet, v katerem bi bilo med ljudmi več prostora za bližino, ne nastane sam od sebe. Vsakdo vanj posega s tistim, kar zna, v odnosih, ki jih gradi in skozi delo, ki mu je bilo zaupano. Nihče nima pred seboj celote, vsak pa drži en majhen del nje. V neskončno prepleteni mreži človeških odnosov imajo različna dela različne možnosti, da nekaj udejanjijo. Kreativno delo ima pri tem posebno odgovornost, saj ustvarja podobe, zgodbe in prostore, skozi katere ljudje gledamo svet, drug drugega in nazadnje tudi sami sebe. Kar si dovolj dolgo predstavljamo, začne počasi spreminjati tudi to, kar imamo za mogoče in nazadnje za resnično. V tem smislu življenje pogosto začne posnemati podobe, ki mu jih umetnost pokaže.</p>
+        <p>Pri nas je zato vprašanje, kaj želimo puščati za seboj, sčasoma postalo tudi vprašanje, kaj lahko s svojim delom k temu prispevamo. Odgovor smo morali najprej poiskati med seboj. V skupnosti, ki jo gradimo sami, v načinu, kako delamo skupaj, kako si zaupamo in kaj drug drugemu omogočimo, da postanemo. Šele od tam lahko isto držo nesemo navzven, v filme, kampanje, dogodke in vse druge oblike, ki jih naše delo lahko prevzame.</p>
+        <p>Iz te potrebe je nastal Perennial.</p>
+        <p>Ne zanima nas toliko, koliko časa bo obstajala stvar, ki jo ustvarimo, kot kaj bo po njej ostalo med ljudmi. Če je bilo delo vredno svojega časa, se nekaj nadaljuje tudi brez njega. Morda kot spomin, morda kot odnos, morda samo kot razlog, da se ljudje še enkrat srečajo. Najdlje seže tisto, iz česar lahko zraste skupnost, najprej med nami in potem skozi naše delo tudi zunaj nas,. Morda je prav to edino povabilo, ki ga lahko zares ponudimo: da vsak v tem, kar zna in zmore, poišče svoj način, kako nekaj od tega sveta pustiti bolj povezano, kot ga je našel, ker kar je narejeno s pomenom, preživi trenutek, za katerega je bilo ustvarjeno.</p>
+        <p>Takšno povabilo pa najprej in predvsem zavezuje tistega, ki ga izreče. Ta dnevnik bo naše majhno ognjišče in s tem prvim zapisom polagamo prvo poleno. Bolj kot velikost plamena nas zanima, ali bo pod pepelom ostala žerjavica, h kateri se bomo lahko vrnili jutri in pojutrišnjem. Za začetek je dovolj, da ogenj ne ugasne.</p>
+      </div>
+    </details>
+  </div>
+</section>
+
+<div class="draw-menu" hidden>
+  <div class="draw-palette" hidden></div>
+  <button class="draw-btn draw-color" type="button" aria-label="barva"></button>
+  <button class="draw-btn" data-tool="pencil" type="button" aria-label="svinčnik"><svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round" stroke-linecap="round"><path d="M4 20l1.2-4.6L16.6 4a1.8 1.8 0 012.5 0l.9.9a1.8 1.8 0 010 2.5L8.6 18.8z"/><path d="M14.5 6.2l3.3 3.3M4 20l4.6-1.2"/></svg></button>
+  <button class="draw-btn" data-tool="eraser" type="button" aria-label="radirka"><svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round" stroke-linecap="round"><path d="M9 19l-5-5a1.8 1.8 0 010-2.5l7-7a1.8 1.8 0 012.5 0l5 5a1.8 1.8 0 010 2.5L11 19z"/><path d="M7.5 9.5l7 7M9 19h11"/></svg></button>
+  <button class="draw-btn draw-undo" type="button" aria-label="razveljavi"><svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round" stroke-linecap="round"><path d="M9 14L4 9l5-5"/><path d="M4 9h10.5a5.5 5.5 0 010 11H11"/></svg></button>
+</div>
+
+<section class="view page gone" id="page-kontakt" aria-label="kontakt">
+  <canvas class="draw-canvas" aria-hidden="true"></canvas>
+  <div class="kontakt-mid"><h1 class="big mail"><a href="mailto:info@perennialmade.com">info@<wbr>perennialmade.com</a></h1></div>
+  <div class="contact">
+    <div>041-815-088</div>
+    <div class="social">
+      <a href="https://www.instagram.com/perennial.made" target="_blank" rel="noopener noreferrer">Instagram</a>
+      <a href="https://www.tiktok.com/@perennial.made" target="_blank" rel="noopener noreferrer">Tiktok</a>
+    </div>
+  </div>
+</section>
+
+<template id="tpl-footer">
+  <footer class="sub-footer">
+    <a class="tiktok-note hand" href="https://www.tiktok.com/@perennial.made" target="_blank" rel="noopener noreferrer">Kjut mačke na tiktoku</a>
+    <div class="contact">
+      <div>041-815-088<br><a href="mailto:info@perennialmade.com">info@perennialmade.com</a></div>
+      <div class="social">
+        <a href="https://www.instagram.com/perennial.made" target="_blank" rel="noopener noreferrer">Instagram</a>
+        <a href="https://www.tiktok.com/@perennial.made" target="_blank" rel="noopener noreferrer">Tiktok</a>
+      </div>
+    </div>
+    <div class="copyright">all rights reserved @perennial 2026</div>
+  </footer>
+</template>
+
+<script>
+  window.PERENNIAL_SETTINGS = {
+    wordWidth: 1152,   // letters' width in a 1920 canvas (1152 = hero wordmark at 60vw)
+    frost: 19,         // frosted glass strength
+    ink: '#141414'
+  };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/opentype.js@1.3.4/dist/opentype.min.js"></script>
+<script src="perennial-fall.js"></script>
+<script src="main.js"></script>
+<script src="draw.js"></script>
+<script src="works.js"></script>
+<script src="wheel-shaders.js"></script>
+<script src="wheel.js"></script>
+</body>
+</html>
