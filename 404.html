@@ -1,0 +1,8 @@
+<!DOCTYPE html>
+<html lang="sl"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Perennial</title>
+<meta name="robots" content="noindex"></head>
+<body style="margin:0;background:#f2f1ef"><script>
+// back to the site root, on a custom domain (/) and on a project page (/repo/)
+var h = location.hostname, seg = location.pathname.split('/')[1];
+location.replace(/\.github\.io$/.test(h) && seg ? '/' + seg + '/' : '/');
+</script><noscript><a href="./">Perennial</a></noscript></body></html>
