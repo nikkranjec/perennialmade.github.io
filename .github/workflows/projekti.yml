@@ -1,0 +1,19 @@
+name: Posodobi seznam projektov
+on:
+  push:
+    paths: ['projekti/**', '!projekti/projekti.json']
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: node build-projekti.mjs
+      - name: Commit
+        run: |
+          git config user.name "github-actions"
+          git config user.email "actions@github.com"
+          git add projekti/projekti.json
+          git diff --cached --quiet || (git commit -m "Posodobi projekti.json" && git push)
