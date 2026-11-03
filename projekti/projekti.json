@@ -104,5 +104,19 @@
     "ratio": 0,
     "aspect": 0.5625,
     "openAspect": 0.5625
+  },
+  {
+    "dir": "08-ministrstvo-za-javno-upravo",
+    "name": "Ministrstvo za javno upravo",
+    "desc": "Korporativne video vsebine.",
+    "thumb": "projekti/08-ministrstvo-za-javno-upravo/naslovnica.webp",
+    "videos": [
+      "projekti/08-ministrstvo-za-javno-upravo/video.mp4"
+    ],
+    "images": [],
+    "youtube": "",
+    "ratio": 0,
+    "aspect": 0.5625,
+    "openAspect": 0.5625
   }
 ]
