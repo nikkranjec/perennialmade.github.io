@@ -12,23 +12,6 @@
     "openAspect": 2.35
   },
   {
-    "dir": "01-mestna-obcina-ljubljana",
-    "name": "Mestna občina Ljubljana",
-    "desc": "Organska vsebina za socialna omrežja.",
-    "thumb": "projekti/01-mestna-obcina-ljubljana/naslovnica.webp",
-    "videos": [
-      "projekti/01-mestna-obcina-ljubljana/video-1.mp4",
-      "projekti/01-mestna-obcina-ljubljana/video-2.mp4",
-      "projekti/01-mestna-obcina-ljubljana/video-3.mp4",
-      "projekti/01-mestna-obcina-ljubljana/video-4.mp4"
-    ],
-    "images": [],
-    "youtube": "",
-    "ratio": 0,
-    "aspect": 0.5625,
-    "openAspect": 0.5625
-  },
-  {
     "dir": "02-kokosy",
     "name": "Kokosy",
     "desc": "Napovednik za koncert ob 7. obletnici skupine.",
@@ -104,5 +87,17 @@
     "ratio": 0,
     "aspect": 0.6667,
     "openAspect": 0.5625
+  },
+  {
+    "dir": "07-mestna-obcina-ljubljana",
+    "name": "mestna obcina ljubljana",
+    "desc": "",
+    "thumb": "projekti/07-mestna-obcina-ljubljana/naslovnica.webp",
+    "videos": [],
+    "images": [],
+    "youtube": "",
+    "ratio": 0,
+    "aspect": 0.5625,
+    "openAspect": 0
   }
 ]
