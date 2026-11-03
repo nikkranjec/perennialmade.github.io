@@ -90,14 +90,19 @@
   },
   {
     "dir": "07-mestna-obcina-ljubljana",
-    "name": "mestna obcina ljubljana",
-    "desc": "",
+    "name": "Mestna občina Ljubljana",
+    "desc": "Organska vsebina za socialna omrežja.",
     "thumb": "projekti/07-mestna-obcina-ljubljana/naslovnica.webp",
-    "videos": [],
+    "videos": [
+      "projekti/07-mestna-obcina-ljubljana/video-1.mp4",
+      "projekti/07-mestna-obcina-ljubljana/video-2.mp4",
+      "projekti/07-mestna-obcina-ljubljana/video-3.mp4",
+      "projekti/07-mestna-obcina-ljubljana/video-4.mp4"
+    ],
     "images": [],
     "youtube": "",
     "ratio": 0,
     "aspect": 0.5625,
-    "openAspect": 0
+    "openAspect": 0.5625
   }
 ]
