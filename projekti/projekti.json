@@ -27,8 +27,8 @@
   },
   {
     "dir": "03-ministrstvo-za-javno-upravo",
-    "name": "Ministrstvo za javno upravo",
-    "desc": "Korporativne video vsebine.",
+    "name": "ministrstvo za javno upravo",
+    "desc": "",
     "thumb": "projekti/03-ministrstvo-za-javno-upravo/naslovnica.webp",
     "videos": [
       "projekti/03-ministrstvo-za-javno-upravo/video.mp4"
